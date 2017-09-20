@@ -1,0 +1,30 @@
+<div class="form-group">
+  <label>Kegiatan Setelah Lulus</label>
+  <select class="form-control" id="kegiatan_setelah_lulus" name="kegiatan_setelah_lulus" onchange="onchange(this.value)" required>
+     <option value="">-Kegiatan Setelah Lulus-</option>
+     <option value="Kuliah">Kuliah</option>
+     <option value="Bekerja">Bekerja</option>
+     <option value="Wirausaha">Wirausaha</option>
+     <option value="Tidak bekerja/kuliah/wirausaha">Tidak bekerja/kuliah/wirausaha</option>
+   </select>
+</div>
+
+<script>
+  function onchange() {
+    if (document.getElementById('kegiatan_setelah_lulus').value=="kuliah")
+    {
+      document.getElementById('nama_universitas').disabled="true";
+      // document.getElementById('#fa_universitas').disabled="true";
+      // document.getElementById('#nama_universitas').disabled="true";
+      // document.getElementById('#nama_universitas').disabled="true";
+    }
+    else
+    {
+      document.getElementById('nama_universitas').disabled="false";
+      // document.getElementById('#nama_universitas').disabled="true";
+      // document.getElementById('#nama_universitas').disabled="true";
+      // document.getElementById('#nama_universitas').disabled="true";
+    }
+
+  }
+</script>
